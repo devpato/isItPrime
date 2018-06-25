@@ -9,7 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var numberField: UITextField!
+    @IBAction func show(_ sender: Any) {
+       
+    }
+    let number = 643
+    var isPrime = true
+    
+    var i = 2
+    
+    func isPrime(number : Int) -> Bool {
+        while i < number {
+            if number % i == 0 {
+                isPrime = false
+                return isPrime
+            }
+                i+=1
+        }
+        return true
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
